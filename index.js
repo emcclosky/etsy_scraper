@@ -14,6 +14,26 @@ app.get('/scrape', (req, res) => {
             let title, price, rating;
             const json = { title: "", price: "", rating: "" };
 
+            $('#listing-title').filter(function(){
+               const data = $(this);   
+               title = data.children().first().text();
+               
+               json.title = title;
+
+            });
+
+            $('.buy-box__price ui-toolkit').filter(function(){
+                const data = $(this);
+                price = data.children().first().text();
+                json.price = price;
+            });
+            
+            $('.aggregate_rating display-inline-block').filter(function(){
+                const data = $(this);
+                rating = data.children().first().children().eq(1).text();
+                json.rating = rating;
+            })
+
         }
     })
 })
