@@ -1,0 +1,16 @@
+{
+  "name": "etsy_scraper",
+  "version": "1.0.0",
+  "description": "A scraper for etsy's prices and ratings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "request": "^2.86.0"
+  }
+}
